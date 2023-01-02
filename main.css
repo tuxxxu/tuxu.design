@@ -1,0 +1,53 @@
+body {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: blue;
+}
+.dot {
+    display: none;
+}
+section{
+    max-width: 216px;
+    display: flex;
+    flex-direction: column;
+}
+p{  
+    color: #FFF;
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+a, a:active, a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    text-decoration: underline;
+}
+::selection {
+    color: #000;
+    background: rgba(255, 255, 0, .99);
+    opacity: 0;
+    ;
+}
+@media screen and (max-width: 420px){
+    p{
+        mix-blend-mode: difference;
+    }
+    .dot {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background: #FFFF00;
+        mix-blend-mode: difference;
+        transition: transform .25s;
+    }
+}
